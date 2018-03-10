@@ -1,12 +1,13 @@
 /* START GENERAL FORMAT */
 
 body{
-	background-image: url("./bgd.jpg");no-repeat center center fixed; 
-        -webkit-background-size: cover;
+	background-image: url("./bgd.jpg");
+		no-repeat center center fixed; 
+        -webkit-background-size: cover; 
         -moz-background-size: cover;
         -o-background-size: cover;
-        background-size: cover;
-	text-align:center;
+        background-size: cover; 
+	 text-align:center; 
 	font-size:16px;
 	font-variant:small-caps;
 	font-family:Georgia;
@@ -151,7 +152,7 @@ ul.comicNav  li a {
 	background-color:#008000;
 	color: #FFF;
 	border: 1.5px solid #333;
-	font-size: 16px;
+	font-size: 20px;
 	font-weight: 600;
 	padding: 1.5px 12px;
 	margin: 0 4px;

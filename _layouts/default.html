@@ -21,12 +21,12 @@
 <body>
 <div id="topContainer">
 <div id="topLeft">
-<span><a href="http://eyster.com/"><img src="../../../assets/masthead.png" alt="Eyster Field Notes logo" height="115" width="165"></a></span>
+<span><a href="http://fieldnotes.eyster.com/"><img src="../../../assets/masthead.png" alt="Eyster Field Notes logo" height="115" width="165"></a></span>
 
 </div>
 <div id="topRight">
 <div id="masthead">
-<span><a href="http://eyster.com/"><img src="../../../assets/profile.png" alt="Eyster picture" height="83" width="185"></a></span>
+<span><a href="http://fieldnotes.eyster.com/"><img src="../../../assets/profile.png" alt="Eyster picture" height="83" width="185"></a></span>
 <span id="slogan">Sketches of the nature <br> we see around us.</span>
 </div>
 <div id="news">
@@ -50,13 +50,13 @@ Eyster Field Notes updates every day, unless we're in the field.
 {% endif %}
 	<li><a rel="prev" href="./{{prevpage}}" accesskey="p">&lt; Prev</a></li>
 	
-<!-- <li><a href="http://nature.eyster.com/random/note">Random</a></li> -->
+
 {% if page.number < lastnum %}
 	{% assign nextpage = page.number| plus: 1 %}
 {% else %}
 	 {% assign nextpage = ""%}
 {% endif %}
-
+<li><a href="../random">Random</a></li> 
 <li><a rel="next" href="./{{nextpage}}"accesskey="n">Next &gt;</a></li>
 <li><a href="./">&gt;|</a></li> 
 </ul>

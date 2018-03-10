@@ -1,45 +1,50 @@
-<!DOCTYPE html>
-<html lang="en-US">
-
-<body>
-  <main>
-    <head> 
-
- <script>
-  var comingFromPost = document.referrer;
-
-  function linkToRandomBlogPost() {
-    var allPosts = [];
-    {% for post in site.posts %}
-    allPosts.push('{{post.url}}');
-    {% endfor %}
-
-    var i = 0;
-    do {
-      var randomPostLink = allPosts[Math.floor(Math.random() * allPosts.length)];
-      i++;}
-    while (comingFromPost.includes(randomPostLink) || i > 10)
-
-    if (i > 10 && comingFromPost !== '/fieldnotes/1') {
-      randomPostLink = '/fieldnotes/1';}
-
-    if (i > 10 && comingFromPost === '/fieldnotes/l') {
-      randomPostLink = '/fieldnotes/1'
-    }
-
-    return randomPostLink;
-  }
-
-  location.replace(linkToRandomBlogPost())
-
-  </script>
+---
+# Jekyll page that redirects to a random page, post or document
+# https://github.com/jekylltools/jekyll-random-redirect
+# v1.6
+title: Random
+layout: none
+permalink: /random/
+---
+{%- assign docs = site.posts -%}
+{%- if site.random_redirect.pages == true -%}
+  {%- assign pages = site.html_pages | where_exp:"page","page.url != '/random/'" -%}
+  {%- assign docs = docs | concat: pages -%}
+{%- endif -%}
+{%- if site.random_redirect.documents == true -%}
+  {%- assign docs = docs | concat: site.documents | uniq -%}
+{%- endif -%}
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!--[if lt IE 9]><script type="text/javascript">var IE_fix=true;</script><![endif]-->
+    <script type="text/javascript">
+      var urls=[];
+      {% for doc in docs -%}
+      urls.push("{{ doc.url | absolute_url }}");
+      {% endfor -%}
+      var url = urls[Math.floor(Math.random()*urls.length)];
+      var link = document.createElement('link');
+      link.setAttribute('rel', 'canonical');
+      link.setAttribute('href', url);
+      document.head.appendChild(link);
+      if (typeof IE_fix != "undefined") {
+        document.write("Redirecting...");
+        var referLink = document.createElement("a");
+        referLink.href = url;
+        document.body.appendChild(referLink);
+        referLink.click();
+      } else {
+        window.location.replace(url);
+      }
+    </script>
+    <title>Redirecting...</title>
   </head>
-
-<noscript>
-  <h1>JavaScript is turned off</h1>
-  <p>To get to a random post, please turn on javascript</p>
-</noscript>
-
-  </main>
-</body>
+  <body>
+    <noscript>JavaScript is required to load a random page for you.<br>
+      Please enable JavaScript, then refresh this page.<br><br>
+      <a href="{{ site.url }}">Go back home...</a>
+    </noscript>
+  </body>
 </html>
