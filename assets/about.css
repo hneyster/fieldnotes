@@ -1,12 +1,66 @@
 /* START GENERAL FORMAT */
 
-.header {
-    background-color:rgba(10, 10, 10, 0.1);
-    text-align: center;
-    padding: 20px;
-	width:780px;
+body{
+	background-image: url("./property1.jpg");no-repeat center center fixed; 
+		background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
 }
 
+#container {
+	color: black; 
+	width: 800px;
+	margin-left:auto;
+	margin-right:auto;
+	height:800px;
+}
+#header {
+    background-color:rgba(10, 10, 10, 0.2);
+    text-align: center;
+	color: black;
+	height; 250px;
+}
+#masthead {
+	float: left;
+	width:200px;
+}
+#title {
+	float:left;
+	text-align: center;
+	width:400px;
+	background-color:rgba(10, 10, 10, 0.2);
+	height:115px;
+
+
+}
+#rmasthead{
+	width:200px;
+	float:right;
+}
+#tcontent {
+		padding-top:50px;
+
+}
+
+#nav {
+	width:200px;
+	float: left;
+	clear: both;
+}
+#main {
+	width:400px;
+	float:left;
+}
+#rbox{
+	width:182.5px;
+	float:right;
+}
+#icontent {
+	clear: both;
+	padding: 10px;
+}
 .column {
     float: center;
 	position:relative;
@@ -15,7 +69,7 @@
 /* Left and right column */
 .column.side {
     width: 25%;
-	float:center;
+	float:left;
 	position:relative;
 }
 
@@ -23,27 +77,10 @@
 .column.middle {
     width: 50%;
 }
-body{
-	background-image: url("./property1.jpg");no-repeat center center fixed; 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-	text-align:center;
-	font-size:16px;
-	font-variant:small-caps;
-	font-family:Georgia;
-	font-weight:500;
-	text-decoration: none;
-	position: absolute;
-	left: 50%;
-	width: 780;
-	margin-left: -390px;
-}
 
 .image-cropper {
     width: 300px;
-    height: 350px;
+    height: 800px;
     position: relative;
     overflow: hidden;
     border-radius: 10%;
@@ -53,13 +90,18 @@ body{
     height: 350px;
     position: relative;
     overflow: hidden;
-    border-radius: 10%;
+    border-radius: 20%;
 }
 
+.crop {
+	overflow:hidden;
+	border-radius:30%;
+}
 img {
-    display: inline;
-    margin: 0 auto;
-    height: 100%;
-    width: auto;
+    max-height: 300px;
+    max-width: 165px;
+	
+
 
 }
+
