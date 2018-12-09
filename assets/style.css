@@ -32,10 +32,10 @@ img{
 	border:0;
 }
 .box { /*any of the box layouts & white backgrounds#071419*/ 
-	background:#c6ecc6;
-	border-style:solid;
-	border-width:1.5px;
-	border-color:#008000;
+	background: #c6ecc6;
+	border-style: solid;
+	border-width: 0px;
+	border-color: transparent;
 	/*border-radius: 12px;
 	-moz-border-radius: 12px;*/
 }
@@ -84,6 +84,7 @@ img{
 }
 #masthead {
 	display: block;
+	text-align: center;
 }
 #slogan {
         padding: 20px;
@@ -92,7 +93,8 @@ img{
 	font-style: italic;
 	font-weight: 800;
 	line-height: 120%;
-	vertical-align: top;
+	vertical-align: middle;
+	text-align: center;
 }   
 #bgRight {
 	right: 0;
@@ -110,8 +112,8 @@ img{
 /*START MIDDLE */
 #middleContainer {
 	width:780px;
-	margin: 1px  auto;
-	padding: 5px 0;
+	margin: 7px  auto;
+	padding: 25px 0;
 }
 
 #ctitle {
@@ -151,7 +153,7 @@ ul.comicNav  li a {
 	/*background-color: #6E6E6E;*/
 	background-color:#008000;
 	color: #FFF;
-	border: 1.5px solid #333;
+	/*border: 1.5px solid #333;*/
 	font-size: 20px;
 	font-weight: 600;
 	padding: 1.5px 12px;
