@@ -32,7 +32,7 @@ img{
 	border:0;
 }
 .box { /*any of the box layouts & white backgrounds#071419*/ 
-	background: #c6ecc6;
+	/* background: #c6ecc6; */
 	border-style: solid;
 	border-width: 0px;
 	border-color: transparent;
@@ -77,7 +77,7 @@ img{
 	padding-top:15px;
 	padding-bottom:15px;
 	padding-left:15px;
-	float:right;
+	float:center;
 	position:relative;
 	text-align:left;
 	line-height: 150%;
@@ -131,7 +131,8 @@ img{
 .column {
     float: right;
     width: 50%;
-	text-align: center;
+    text-align: center;
+    color:white;
 }
 
 /* Clear floats after the columns */
@@ -204,7 +205,8 @@ ul.comicNav a:hover, ul.comicNav a:focus {
     display: block;
     margin: auto;
     width: 410px;
-	font-size:12px
+    font-size:12px;
+    color:white;		  
 }
 
 #transcript {display: none;}
