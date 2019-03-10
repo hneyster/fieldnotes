@@ -90,7 +90,7 @@ img{
         padding: 20px;
 	display: inline-block;
 	font-size: 20px;
-	font-style: italic;
+	/* font-style: italic; */
 	font-weight: 800;
 	line-height: 120%;
 	vertical-align: middle;
